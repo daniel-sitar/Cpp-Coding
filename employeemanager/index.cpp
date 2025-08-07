@@ -10,7 +10,6 @@ int main(){
         string lastName;
         string department;
         int salary;
-        string performance;
     };
 
     map<int, employee> workers;
@@ -24,16 +23,18 @@ int main(){
         cout << "First name : ";
         string firstName;
         cin >> firstName;
-        cout << "Second name : ";
-        string secondName;
-        cin >> secondName;
+        cout << "Last name : ";
+        string lastName;
+        cin >> lastName;
         cout << "Department : ";
         string department;
         cin >> department;
         cout << "Salary : ";
         int salary;
         cin >> salary;
+        int id = workers.size() + 1;
 
+        workers[id] = employee{id,firstName,lastName,department,salary};
     }
     
 
