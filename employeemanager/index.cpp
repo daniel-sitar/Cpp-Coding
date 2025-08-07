@@ -17,7 +17,6 @@ int main(){
     int workerAddAmount;
     cout << "How many workers do you want to add? : ";
     cin >> workerAddAmount;
-
     
     for(int i = 1; i <= workerAddAmount; i++){
         cout << "First name : ";
@@ -35,13 +34,15 @@ int main(){
         int id = workers.size() + 1;
 
         workers[id] = employee{id,firstName,lastName,department,salary};
-    }
-    
-
-
-
-
-
+    };
+    int size = workers.size();
+    for(int n = 1; n <= size; n++){
+        cout << workers[n].id << "\n";
+        cout << workers[n].firstName << "\n";
+        cout << workers[n].lastName << "\n";
+        cout << workers[n].department << "\n";
+        cout << workers[n].salary << "\n";
+    };
 
     return 0;
 }
